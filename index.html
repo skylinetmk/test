@@ -21,6 +21,7 @@
     font-weight: 200;
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color)
+	}
 
     #main {
       width: 100%;
@@ -58,6 +59,26 @@
     button:hover {
       background: var(-tg-theme-secondary-bg-color);
     }
+
+
+	#form {
+		display: none;
+		text-align: center;
+	}
+
+	input {
+		width: 90%;
+		outline: none;
+		margin: 10px 5%;
+		padding: 15px 10px;
+		font-size: 14px;
+		border: 2px solid silver;
+		border-radius: 5px;
+	}
+
+	input:focus {
+		border-color: #db5d3d;
+	}
   </style>
 </head>
   <div id="main">
@@ -68,8 +89,8 @@
   </div>
 
 
-  <form id="form" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
-     <input name="name" type="text" placeholder="Введите Ваше имя">
+  <form id="form" method="POST"  autocomplete="off" enctype="multipart/form-data">
+     <input name="user_name" type="text" placeholder="Введите Ваше имя">
      <input name="email" type="text" placeholder="Введите ваш email">
      <input name="phone" type="text" placeholder="Введите ваш телефон">
 
