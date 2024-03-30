@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,35 +112,35 @@
       document.getElementById("error").InnerText = "";
       document.getElementById("main").style.display = "none";
       document.getElementById("form").style.display = "block";
-      <!--document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;-->
+      //document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
     });
 
     order.addEventListener("click",() => {
       let user_name = document.getElementById("user_name").value;
-      if (user_name.length() < 3)
+      if (user_name.length < 3)
       {
-	document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
-	return;
+	      document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
+	      return;
       }
       let email = document.getElementById("email").value;
-      if (email.length() < 5)
+      if (email.length < 5)
       {
         document.getElementById("error").innerText = "Ошибка в адресе почты (слишком короткое)";
-	return;
+	      return;
       }	      
       let phone = document.getElementById("phone").value;
-      if (phone.length() < 11)
+      if (phone.length < 11)
       {
         document.getElementById("error").innerText = "Ошибка в телефоне (11 цифр)";
-	return;
+	      return;
       }	      
 
       let send_data = {
         user_name: user_name,
         phone: phone,
         email: email
-      };
-      <!--alert(send_data['user_name'])-->
+      }
+      //alert(send_data['user_name'])
       tg.sendData(JSON.stringify(send_data));
       tg.close();
     });
