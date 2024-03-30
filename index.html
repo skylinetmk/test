@@ -115,9 +115,9 @@
       //document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
     });
 
-    order.addEventListener("click",() => { alert("sdsd");
+    order.addEventListener("click",() => { 
       let user_name = document.getElementById("user_name").value;
-	  
+      alert(user_name);			  
       if (user_name.length < 3)
       {
 	    document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
