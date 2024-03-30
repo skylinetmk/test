@@ -118,20 +118,29 @@
     order.addEventListener("click",() => {
       let user_name = document.getElementById("user_name").value;
       if (user_name.length() < 3)
-        document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
+      {
+	document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
+	return;
+      }
       let email = document.getElementById("email").value;
       if (email.length() < 5)
+      {
         document.getElementById("error").innerText = "Ошибка в адресе почты (слишком короткое)";
+	return;
+      }	      
       let phone = document.getElementById("phone").value;
       if (phone.length() < 11)
+      {
         document.getElementById("error").innerText = "Ошибка в телефоне (11 цифр)";
+	return;
+      }	      
 
       let send_data = {
         user_name: user_name,
         phone: phone,
         email: email
-      }
-      alert(send_data['user_name'])
+      };
+      <!--alert(send_data['user_name'])-->
       tg.sendData(JSON.stringify(send_data));
       tg.close();
     });
