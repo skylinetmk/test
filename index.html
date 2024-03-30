@@ -123,13 +123,13 @@
 	    return;
       };
       let user_email = document.getElementById("email").value;
-      if (email.length < 5)
+      if (user_email.length < 5)
       {
         document.getElementById("error").innerText = "Ошибка в адресе почты (слишком короткое)";
 	    return;
       };
       let user_phone = document.getElementById("phone").value;
-      if (phone.length < 11)
+      if (user_phone.length < 11)
       {
 		document.getElementById("error").innerText = "Ошибка в телефоне (11 цифр)";
 	    return;
