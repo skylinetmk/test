@@ -131,6 +131,7 @@
         phone: phone,
         email: email
       };
+	    alert(send_data['user_name'])
       tg.sendData(JSON.stringify(send_data));
       tg.close();
     });
