@@ -90,9 +90,9 @@
 
 
   <form id="form">
-     <input name="name" type="text" placeholder="Введите Ваше имя">
-     <input name="email" type="text" placeholder="Введите ваш email">
-     <input name="phone" type="text" placeholder="Введите ваш телефон">
+     <input id="name" type="text" placeholder="Введите Ваше имя">
+     <input id="email" type="text" placeholder="Введите ваш email">
+     <input id="phone" type="text" placeholder="Введите ваш телефон">
      <div id="error"></div>
     <!--Кнопка отправки формы-->
     <button id="order">Оформить заказ</button>
@@ -114,10 +114,9 @@
       document.getElementById("form").style.display = "block";
       //document.getElementById("name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
     });
-
-    order.addEventListener("click",() => { alert(document.getElementById("name").value);
+	
+    order.addEventListener("click",() => { 
       let user_name = document.getElementById("name").value;
-	  alert(user_name);
       if (user_name.length < 3)
       {
 	    document.getElementById("error").innerText = "Ошибка в имени (слишком короткое)";
